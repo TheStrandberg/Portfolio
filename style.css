@@ -1,0 +1,267 @@
+* {
+    margin:  0;
+    padding: 0;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+    background: linear-gradient(90deg,rgb(201, 135, 255), rgb(118, 207, 230));
+}
+
+#Circle1, #Circle2, #Circle3{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(90deg,rgb(183, 95, 255), rgb(76, 196, 226));
+    z-index: -1;
+    border-radius: 50%;
+}
+
+#Circle1{
+    width: 250px;
+    height: 250px;
+    inset: 60% 0 0 10%;
+}
+
+#Circle2{
+    inset: 5% 0 0 70%;
+}
+
+#Circle3 {
+    width: 150px;
+    height: 150px;
+    inset: 25% 0 0 25%; 
+}
+
+.window {
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+    border-radius: 1rem;
+    background: linear-gradient(
+        to right bottom, 
+    rgba(255,255,255, 0.7), 
+    rgba(255,255,255, 0.3)
+    );
+    backdrop-filter: blur(1rem);
+}
+
+.profile {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile-picture img {
+    position: relative;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    transform: scale(75%);
+    box-shadow: 0px 0px 0px 8px rgba(255,255,255,0.3); 
+    margin-left: 3rem;
+}
+
+.profile-text {
+    position: relative;
+    font-size: 24px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    max-height: 150px;
+}
+
+.profile-text h2{
+    color: purple;
+    font-size: 24px;
+    margin: 5px 0 5px 0;
+}
+
+body, .main, .menu {
+    display: flex;
+    align-items: center;
+}
+.main {
+    position: relative;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.main input:checked ~ .menu {
+    width: 500px;
+}
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+.menu li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.menu li a:hover {
+    color: #161919;
+}
+.main input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+.main span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.main input:checked ~ span {
+    background-color: #FF4D50;
+}
+.main span:nth-child(2) {
+    transform: translateY(-8px);
+}
+.main input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.main span:nth-child(3) {
+    transform: translateY(8px);
+}
+.main input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+.main input:checked ~ span:nth-child(4) {
+    display: none;
+}
+
+.collapsible {
+    background-color: rgb(209, 69, 209);
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 15%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    margin-top: 1rem;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: rgb(238, 120, 238);
+  }
+  
+  .content {
+    margin-left: 1rem;
+    padding: 0 18px;
+    background-color: rgb(255, 255, 255, 0.5);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .content p {
+      padding: 1rem;
+      margin: 0%;
+  }
+
+  .education {
+    padding: 3rem;
+  }
+
+  .education h1 {
+    color: rgb(89, 21, 121);
+  }
+
+  .education h2 {
+    color: rgb(236, 133, 236);
+    padding: 0.5rem;
+  }
+
+  .education h3, h4 {
+    color: black;
+    margin-left: 2rem;
+  }
+
+  .education h4 {
+      font-size: 15px;
+      font-style: italic;
+  }
+
+  .headers img {
+      margin-left: 1rem;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      vertical-align: middle;
+  }
+
+  .headers a {
+    text-decoration: none;
+    color: rgb(236, 133, 236);
+  }
+
+  .headers a:hover {
+    color: rgb(231, 86, 231);
+  }
+
+  .border {
+      display: flex;
+      align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    background: linear-gradient(
+        to right bottom, 
+    rgba(255,255,255, 0.7), 
+    rgba(255,255,255, 0.3)
+    );
+  }
+
+  .portfolio img {
+    width: 200px;
+    height: 200px;  
+}
+
+.border img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    left: 26rem;
+    border-radius: 1rem;
+}
+
+.border h1 {
+    margin-left: 1.5rem;
+    color: rgb(236, 133, 236);
+}
+
+.border a {
+    text-decoration: none;
+}
+
+.border h1:hover {
+    color: rgb(197, 82, 197);
+}
