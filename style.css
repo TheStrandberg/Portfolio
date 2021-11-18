@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: auto;
     background: linear-gradient(90deg,rgb(201, 135, 255), rgb(118, 207, 230));
 }
@@ -25,7 +25,7 @@ body {
 #Circle1{
     width: 250px;
     height: 250px;
-    inset: 60% 0 0 10%;
+    inset: 65% 0 0 15%;
 }
 
 #Circle2{
@@ -40,7 +40,7 @@ body {
 
 .window {
     width: 1000px;
-    height: 700px;
+    min-height: 700px;
     background-color: white;
     border-radius: 1rem;
     background: linear-gradient(
@@ -153,6 +153,11 @@ body, .main, .menu {
     display: none;
 }
 
+.main input:hover ~ span {
+    transform: rotate(45deg);
+    transition: .3s ease-in-out;
+}
+
 .collapsible {
     background-color: rgb(209, 69, 209);
     border-radius: 20px;
@@ -205,12 +210,13 @@ body, .main, .menu {
   }
 
   .education h4 {
-      font-size: 15px;
+      font-size: 12px;
       font-style: italic;
   }
 
   .headers img {
-      margin-left: 1rem;
+      float: right;
+      margin-right: 4rem;
       width: 70px;
       height: 70px;
       border-radius: 50%;
@@ -226,35 +232,41 @@ body, .main, .menu {
     color: rgb(231, 86, 231);
   }
 
-  .border {
-      display: flex;
-      align-items: center;
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    grid-template-rows: repeat(3, 5rem); 
+    column-gap: 15rem;
+    row-gap: 12rem;
+    align-items: center;
+    margin-top: 10%;
     margin-left: 1rem;
-    margin-right: 1rem;
+  }
+
+  .portfolio img {
+    width: 275px;
+    height: 200px;  
     background-color: white;
     border-radius: 1rem;
+    border: 10px solid rgba(255,255,255, 0.7);
     background: linear-gradient(
         to right bottom, 
     rgba(255,255,255, 0.7), 
     rgba(255,255,255, 0.3)
     );
-  }
-
-  .portfolio img {
-    width: 200px;
-    height: 200px;  
+    margin-left: 1rem;
 }
 
+.border {
+    text-align: center;
+  }
+
 .border img {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    position: relative;
-    left: 26rem;
     border-radius: 1rem;
 }
 
 .border h1 {
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
     color: rgb(236, 133, 236);
 }
 
